@@ -1,10 +1,11 @@
 ## PKUToDo后端部分
 &emsp;&emsp;开发工具、环境和技术栈都是目前用到的，后续可继续添加
 ### 开发工具
-| 工具             | 说明                | 官网                                            |
-|----------------| ------------------- | ----------------------------------------------- |
-| IDEA（2024.1.1） | 开发IDE             | https://www.jetbrains.com/idea/download         |
-| Navicat（17）    | 数据库连接工具      | https://www.navicat.com/en/download/navicat-for-mysql            |
+| 工具         | 版本       |说明     | 官网                                            |
+|------------|----------|--------| ----------------------------------------------- |
+| IDEA       | 2024.1.1 | 开发IDE       | https://www.jetbrains.com/idea/download         |
+| Navicat| 17       | 数据库连接工具    | https://www.navicat.com/en/download/navicat-for-mysql |
+| maven  | 3.9.8    | 项目构建工具 |     http://maven.apache.org     |
 
 ### 开发环境
 | 工具          | 版本号 | 下载                                                         |

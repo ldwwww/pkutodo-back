@@ -1,0 +1,49 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    name: pkutodo
+    url: jdbc:mysql://localhost:3306/pkutodo?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8
+    username: root
+    password: aveeno22
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mail:
+    host: smtphz.qiye.163.com  #  发送（SMTP）邮件服务器
+    username: 2100013519@stu.pku.edu.cn
+    password: aveeno22
+    protocol: smtp #发送邮件协议
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.starttls.enable: true
+    properties.mail.smtp.starttls.required: true
+    properties.mail.smtp.ssl.enable: true
+    default-encoding: utf-8
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+
+#springfox:
+#  documentation:
+#    # 是否启用Swagger扫描代码生成文档
+#    enabled: true
+#    open-api:
+#      # 是否启用Swagger的open-api
+#      enabled: false
+#    swagger-ui:
+#      # 是否启用Swagger的Web UI
+#      enabled: true
+#      # 配置文档基础路径，此时路径为：/doc/swagger-ui/index.html
+#      base-url: /doc
+
+mybatis:
+  mapper-locations:
+    - classpath:dao/*.xml  # 自定义mapper
+    - classpath*:edu/**/mapper/*.xml  # MBG自动生成mapper

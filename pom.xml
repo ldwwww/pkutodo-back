@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.3.2</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>edu.pku</groupId>
+	<artifactId>PKUToDo-backend</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>PKUToDo-backend</name>
+	<description>PKUToDo-backend</description>
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
+
+	<properties>
+		<java.version>17</java.version>
+		<spring-boot.version>3.3.2</spring-boot.version>
+
+		<springfox-swagger.version>3.0.0</springfox-swagger.version>
+		<swagger-models.version>1.6.0</swagger-models.version>
+		<swagger-annotations.version>1.6.0</swagger-annotations.version>
+
+		<mybatis-generator.version>1.4.2</mybatis-generator.version>
+		<mybatis.version>3.5.14</mybatis.version>
+		<mybatis-spring-boot-starter.version>3.0.3</mybatis-spring-boot-starter.version>
+		<pagehelper-starter.version>2.1.0</pagehelper-starter.version>
+		<pagehelper.version>6.1.0</pagehelper.version>
+
+		<hutool.version>5.8.16</hutool.version>
+
+		<druid.version>1.2.9</druid.version>
+		<mysql-connector.version>8.0.29</mysql-connector.version>
+		<spring-data-commons.version>3.2.2</spring-data-commons.version>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- springBoot数据库连接   -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<!-- 引入邮件  -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+
+		<!--SpringBoot整合MyBatis-->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>${mybatis-spring-boot-starter.version}</version>
+		</dependency>
+
+		<!-- MyBatis分页插件 -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>${pagehelper.version}</version>
+		</dependency>
+
+		<!-- MyBatis 生成器 -->
+		<dependency>
+			<groupId>org.mybatis.generator</groupId>
+			<artifactId>mybatis-generator-core</artifactId>
+			<version>${mybatis-generator.version}</version>
+		</dependency>
+
+		<!-- 集成druid连接池 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>${druid.version}</version>
+		</dependency>
+
+		<!--Mysql数据库驱动-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-connector.version}</version>
+		</dependency>
+
+		<!-- Hutool Java工具包 -->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>${hutool.version}</version>
+		</dependency>
+
+		<!-- 支持热部署  -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.22</version> <!-- 请根据最新版本进行更新 -->
+			<scope>provided</scope>
+		</dependency>
+
+<!--		<dependency>&lt;!&ndash;添加Swagger依赖 &ndash;&gt;-->
+<!--			<groupId>io.springfox</groupId>-->
+<!--			<artifactId>springfox-swagger2</artifactId>-->
+<!--			<version>2.7.0</version>-->
+<!--		</dependency>-->
+
+<!--		<dependency>&lt;!&ndash;添加Swagger-UI依赖 &ndash;&gt;-->
+<!--			<groupId>io.springfox</groupId>-->
+<!--			<artifactId>springfox-swagger-ui</artifactId>-->
+<!--			<version>2.7.0</version>-->
+<!--		</dependency>-->
+
+<!--		&lt;!&ndash;springfox swagger官方Starter&ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>io.springfox</groupId>-->
+<!--			<artifactId>springfox-boot-starter</artifactId>-->
+<!--			<version>${springfox-swagger.version}</version>-->
+<!--		</dependency>-->
+
+<!--		<dependency>-->
+<!--			<groupId>io.springfox</groupId>-->
+<!--			<artifactId>springfox-swagger-ui</artifactId>-->
+<!--			<version>3.0.0</version> &lt;!&ndash; 根据实际需要选择版本 &ndash;&gt;-->
+<!--		</dependency>-->
+
+<!--		&lt;!&ndash;Swagger-UI API文档生产工具&ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>io.springfox</groupId>-->
+<!--			<artifactId>springfox-boot-starter</artifactId>-->
+<!--			<version>${springfox-swagger.version}</version>-->
+<!--		</dependency>-->
+
+<!--		&lt;!&ndash;解决Swagger访问主页时的NumberFormatException问题&ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>io.swagger</groupId>-->
+<!--			<artifactId>swagger-models</artifactId>-->
+<!--			<version>${swagger-models.version}</version>-->
+<!--		</dependency>-->
+
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>${swagger-annotations.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.10.2</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.10.2</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

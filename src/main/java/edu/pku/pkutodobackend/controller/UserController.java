@@ -101,10 +101,3 @@ public class UserController {
 //        return sb.toString();
 //    }
 }
-
-
-/**
- * TODO
- * redis缓存token和验证码
- * 用户密码的加密
- */
